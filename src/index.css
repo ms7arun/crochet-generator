@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Source Sans Pro', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    color-scheme: light;
+    color: #374151;
+    background-color: #ffffff;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fef7f0 0%, #fdfcfb 50%, #faf8f5 100%);
+    background-attachment: fixed;
+  }
+
+  /* Custom scrollbar for cozy feel */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f5f1eb;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d1c7bc;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b8a99a;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-yarn-500 hover:bg-yarn-600 text-white font-medium py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-yarn-400 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-beige-200 hover:bg-beige-300 text-beige-900 font-medium py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-beige-300;
+  }
+
+  .btn-stitch {
+    @apply bg-lavender-500 hover:bg-lavender-600 text-white font-medium py-3 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg border-2 border-lavender-400 shadow-md animate-stitch;
+  }
+
+  .btn-dropdown {
+    @apply bg-white hover:bg-lavender-50 text-lavender-700 font-medium py-2 px-4 rounded-xl transition-all duration-300 border-2 border-lavender-200 hover:border-lavender-300 hover:shadow-md;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-beige-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-lavender-400 focus:border-lavender-400 bg-white transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-white rounded-3xl border-2 border-beige-200 p-6 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm bg-opacity-95;
+  }
+
+  .card-stitch {
+    @apply bg-white rounded-3xl border-2 border-dashed border-lavender-300 p-6 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm bg-opacity-95;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #fef7f0 0%, #f3e8ff 25%, #fce7f3 50%, #fffbeb 75%, #f0fdf4 100%);
+  }
+
+  .yarn-wave {
+    @apply absolute w-32 h-32 opacity-20 animate-yarn-wave;
+    background: radial-gradient(circle, #f8b87d 0%, #fbd5b0 50%, transparent 100%);
+  }
+
+  .stitch-border {
+    border-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d8b4fe' fill-opacity='0.6'%3E%3Ccircle cx='10' cy='10' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") 1;
+  }
+
+  /* Custom slider styling */
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #f8b87d;
+    cursor: pointer;
+    border: 2px solid #f5934a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #f8b87d;
+    cursor: pointer;
+    border: 2px solid #f5934a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
